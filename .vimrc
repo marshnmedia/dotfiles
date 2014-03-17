@@ -2,7 +2,7 @@
 " http://stevelosh.com/blog/2010/09/coming-home-to-vim/
 set nocompatible
 " For Pathogen
-runtime bundle/vim-pathogen/autoload/pathogen.vim
+runtime bundle/vim-pathogen.vim/autoload/pathogen.vim
 execute pathogen#infect()
 " Enable file type detection and plugins
 filetype plugin on
