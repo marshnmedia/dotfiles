@@ -51,6 +51,7 @@
 	# Make `git rebase` safer on OS X
 	# More info: <http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/>
 	trustctime = false
+	editor = vim
 
 [color]
 	# Use colors in Git commands that are capable of colored output when
@@ -72,6 +73,7 @@
 [merge]
 	# Include summaries of merged commits in newly created merge commit messages
 	log = true
+	tool = vimdiff
 
 # URL shorthands
 [url "git@github.com:"]
@@ -91,4 +93,4 @@
 	default = matching
 [user]
 	email = mike@marshnmedia.com
-	name = marshnmedia
+	name = Michael Marsh

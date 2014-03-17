@@ -45,9 +45,9 @@ export PATH="$HOME/utils:$PATH"
 
 ### Add custom commands without creating a new fork
 
-If `~/custom` exists, it will be sourced along with the other files. You can use this to add a few custom commands without the need to fork this entire repository, or to add commands you don’t want to commit to a public repository.
+If `~/.custom` exists, it will be sourced along with the other files. You can use this to add a few custom commands without the need to fork this entire repository, or to add commands you don’t want to commit to a public repository.
 
-My `~/custom` looks something like this:
+My `~/.custom` looks something like this:
 
 ```bash
 # Git credentials
@@ -60,7 +60,7 @@ GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
 git config --global user.email "$GIT_AUTHOR_EMAIL"
 ```
 
-You could also use `~/custom` to override settings, functions and aliases from my dotfiles repository. It’s probably better to [fork this repository](https://github.com/marshnmedia/dotfiles/fork) instead, though.
+You could also use `~/.custom` to override settings, functions and aliases from my dotfiles repository. It’s probably better to [fork this repository](https://github.com/marshnmedia/dotfiles/fork) instead, though.
 
 ### Sensible OS X defaults
 
