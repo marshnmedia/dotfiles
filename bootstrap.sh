@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+# original script taken from https://github.com/mathiasbynens/dotfiles
 # This script was updated to use symlinks instead of rsync.
 # revised code taken from the following
 # http://blog.smalleycreative.com/tutorials/using-git-and-github-to-manage-your-dotfiles/
