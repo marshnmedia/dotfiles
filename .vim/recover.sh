@@ -1,6 +1,6 @@
 #!/bin/bash
 
-swap_files=`find . -name "*.swp"`
+swap_files=`find ~/.vim/swaps -name "*.swp"`
 
 for s in $swap_files ; do
   orig_file=`echo $s | perl -pe 's!/\.([^/]*).swp$!/$1!' `
