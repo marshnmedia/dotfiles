@@ -197,3 +197,6 @@ let g:NERDTreeHijackNetrw=0
 
 "session management
 source ~/.vim/session.vim
+
+"hack to add small margin on left
+set foldcolumn=1
