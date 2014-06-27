@@ -200,3 +200,5 @@ source ~/.vim/session.vim
 
 "hack to add small margin on left
 "set foldcolumn=1
+
+nnoremap <Leader>m :w <BAR> !lessc % > %:t:r.css<CR><space>
