@@ -9,11 +9,11 @@
 cd "$(dirname "${BASH_SOURCE}")"
 git pull origin master
 
-function doIt() {
-	rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" \
-		--exclude "README.md" --exclude "LICENSE-MIT.txt" -av --no-perms . ~
-	source ~/.bash_profile
-}
+#function doIt() {
+#	rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" \
+#		--exclude "README.md" --exclude "LICENSE-MIT.txt" -av --no-perms . ~
+#	source ~/.bash_profile
+#}
 
 function displayTitle {
     echo -e "\n\e[4m\033[1m$1\033[0m"
@@ -125,4 +125,5 @@ else
     createSymLinks
 	fi
 fi
-unset doIt
+#unset doIt
+unset createSymLinks
