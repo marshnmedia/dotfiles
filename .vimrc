@@ -42,11 +42,11 @@ if exists("&undodir")
   set undodir=~/.vim/undo
 endif
 " persistent undo
-set undofile
+"set undofile
 "maximum number of changes that can be undone
-set undolevels=1000
+"set undolevels=1000
 "maximum number lines to save for undo on a buffer reload
-set undoreload=10000
+"set undoreload=10000
 " Respect modeline in files
 " set modeline
 " set modelines=4
