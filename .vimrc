@@ -9,7 +9,7 @@ filetype plugin on
 " Enable syntax highlighting
 syntax enable
 " set default background
-set background=light
+set background=dark
 " toggle background color
 nnoremap <leader>b :let &background = ( &background == "dark"? "light" : "dark" )<CR>
 " set color scheme
@@ -202,3 +202,16 @@ source ~/.vim/session.vim
 "set foldcolumn=1
 
 nnoremap <Leader>m :w <BAR> !lessc % > %:t:r.css<CR><space>
+
+let g:airline_theme='solarized'
+let g:airline_solarized_dark_inactive_border = 1
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#fnamemod = ':t'
+
+"buffers
+nmap <leader>T :enew<cr>
+nmap <leader>l :bnext<CR>
+nmap <leader>h :bprevious<CR>
+nmap <leader>bq :bp <BAR> bd #<CR>
+nmap <leader>bl :ls<CR>
