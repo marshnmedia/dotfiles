@@ -79,8 +79,6 @@ set ignorecase
 set smartcase
 " Highlight dynamically as pattern is typed
 set incsearch
-" Always show status line
-set laststatus=2
 " Enable mouse in all modes
 "set mouse=a
 set mouse=
@@ -208,6 +206,13 @@ let g:airline_theme='solarized'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
+"per airline docs:
+"The default setting of 'laststatus' is for the statusline to not appear until
+"a split is created. If you want it to appear all the time, add the following
+"to your vimrc: set laststatus=2
+
+" Always show status line
+set laststatus=2
 
 "buffers
 nmap <leader>T :enew<cr>
