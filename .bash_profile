@@ -1,5 +1,5 @@
 # Add `~/bin` to the `$PATH`
-export PATH="$HOME/.composer/vendor/bin:$HOME/bin:/usr/local/bin:$PATH"
+export PATH="$HOME/.composer/vendor/bin:$HOME/bin:/usr/local/bin:$HOME/.local/bin:$PATH"
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
@@ -46,3 +46,7 @@ stty -ixon -ixoff
 export TERM=screen-256color
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+function perf {
+  curl -4 -o /dev/null -s -w "time_namelookup:  %{time_namelookup}\n time_connect:  %{time_connect}\n time_appconnect: %{time_appconnect}\n time_pretransfer:  %{time_pretransfer}\n time_redirect: %{time_redirect}\n time_starttransfer:  %{time_starttransfer}\n ----------\n time_total:  %{time_total}\n -----------\n size_download: %{size_download}\n size_upload: %{size_upload}\n size_header: %{size_header}\n size_request: %{size_request}\n speed_download: %{speed_download}\n speed_upload: %{speed_upload}" "$1"
+} 
