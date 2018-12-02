@@ -150,6 +150,12 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 
 alias tmuxas="tmux attach-session -t"
 
+# Move export GREP_OPTIONS="--color=auto" (which is deprecated) from .exports to .alias
+# Always enable colored `grep` output`
+alias grep="grep --color=auto"
+alias fgrep="fgrep --color=auto"
+alias egrep="egrep --color=auto"
+
 function perf {
   curl -o /dev/null -s -w "time_namelookup:  %{time_namelookup}\n time_connect:  %{time_connect}\n time_appconnect: %{time_appconnect}\n time_pretransfer:  %{time_pretransfer}\n time_redirect: %{time_redirect}\n time_starttransfer:  %{time_starttransfer}\n ----------\n time_total:  %{time_total}\n" "$1"
 } 

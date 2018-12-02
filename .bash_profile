@@ -1,10 +1,8 @@
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/.composer/vendor/bin:$HOME/bin:/usr/local/bin:$PATH"
-export PATH=$HOME/.local/bin:$PATH
-
-export ANDROID_HOME=/Users/mmarsh/Library/Android/sdk
+export PATH="$HOME/.local/bin:$PATH"
 export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
-
+export ANDROID_HOME=/Users/mmarsh/Library/Android/sdk
 #export JAVA_HOME=$(/usr/libexec/java_home)
 
 # Load the shell dotfiles, and then some:
@@ -52,12 +50,6 @@ stty -ixon -ixoff
 export TERM=screen-256color
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/mmarsh/google-cloud-sdk/path.bash.inc' ]; then source '/Users/mmarsh/google-cloud-sdk/path.bash.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/mmarsh/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/mmarsh/google-cloud-sdk/completion.bash.inc'; fi
 
 function perf {
   curl -4 -o /dev/null -s -w "time_namelookup:  %{time_namelookup}\n time_connect:  %{time_connect}\n time_appconnect: %{time_appconnect}\n time_pretransfer:  %{time_pretransfer}\n time_redirect: %{time_redirect}\n time_starttransfer:  %{time_starttransfer}\n ----------\n time_total:  %{time_total}\n -----------\n size_download: %{size_download}\n size_upload: %{size_upload}\n size_header: %{size_header}\n size_request: %{size_request}\n speed_download: %{speed_download}\n speed_upload: %{speed_upload}" "$1"
