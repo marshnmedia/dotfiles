@@ -5,8 +5,9 @@ set nocompatible
 runtime bundle/vim-pathogen.vim/autoload/pathogen.vim
 execute pathogen#infect()
 " Enable file type detection and plugins
-filetype plugin on
+filetype plugin indent on
 " Enable syntax highlighting
+syntax on
 syntax enable
 " set default background
 set background=dark
@@ -170,25 +171,25 @@ set ssop-=folds      " do not store folds
 nnoremap <leader>ev :vertical topleft split  $MYVIMRC<CR>
 
 "autocommands
-if has("autocmd")
+""if has("autocmd")
   "Auto source(reload) vimrc on save... be careful with errors :)
   "http://www.bestofvim.com/tip/auto-reload-your-vimrc/
-  augroup reload_vimrc " {
-    autocmd!
-    autocmd BufWritePost $MYVIMRC source $MYVIMRC
-  augroup END " }
-  augroup myAutoCommands " {
-    autocmd!
+  ""augroup reload_vimrc " {
+    ""autocmd!
+    ""autocmd BufWritePost $MYVIMRC source $MYVIMRC
+  ""augroup END " }
+  ""augroup myAutoCommands " {
+    ""autocmd!
     " auto save when switching between windows
-    au WinLeave ?* :wa
+    ""au WinLeave ?* :wa
     " Treat .json files as .js
-    au BufNewFile,BufRead *.json setfiletype json syntax=javascript
+    ""au BufNewFile,BufRead *.json setfiletype json syntax=javascript
     " Open NERDTree if no file is specified
     " au vimenter * if !argc() | NERDTree | endif
     " close vim if only thing open is NERDtree
-    au bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-  augroup END " }
-endif
+    ""au bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+  ""augroup END " }
+""endif
 
 " Don't use nerdtree when opening vim
 let g:NERDTreeHijackNetrw=0

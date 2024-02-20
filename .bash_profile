@@ -4,6 +4,8 @@ export PATH="$HOME/.local/bin:$PATH"
 export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 export ANDROID_HOME=/Users/mmarsh/Library/Android/sdk
 #export JAVA_HOME=$(/usr/libexec/java_home)
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")" 
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
@@ -58,3 +60,17 @@ function perf {
 function homestead() { 
   ( cd ~/projects/Homestead && vagrant $* )
 }
+function homestead2() { 
+  ( cd ~/projects/Homestead2 && vagrant $* )
+}
+function homestead3() { 
+  ( cd ~/projects/Homestead3 && vagrant $* )
+}
+
+# Setting PATH for Python 3.11
+# The original version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/3.11/bin:${PATH}"
+export PATH
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
