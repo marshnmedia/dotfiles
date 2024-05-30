@@ -21,7 +21,7 @@ function displayTitle {
 
 function createSymLinks {
 
-    dotDir=$HOME/dotfiles.git
+    dotDir=$HOME/projects/dotfiles.git
     # Make sure the dotfile directory structure exists
     if [ ! -d "$dotDir" ]; then
         mkdir -v -p "$dotDir";
