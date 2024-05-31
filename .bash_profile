@@ -1,6 +1,7 @@
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/.composer/vendor/bin:$HOME/bin:/usr/local/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.ebcli-virtual-env/executables:$PATH"
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
