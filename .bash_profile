@@ -1,5 +1,7 @@
 # Add `~/bin` to the `$PATH`
+export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/sbin
 export PATH="$HOME/.composer/vendor/bin:$HOME/bin:/usr/local/bin:$PATH"
+export PATH="$HOME/.config/composer/vendor/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.ebcli-virtual-env/executables:$PATH"
 

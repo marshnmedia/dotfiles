@@ -7,7 +7,8 @@
 # https://github.com/brettbatie/dotfiles
 
 cd "$(dirname "${BASH_SOURCE}")"
-git pull origin master
+git checkout homestead
+git pull
 
 #function doIt() {
 #	rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" \

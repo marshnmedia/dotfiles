@@ -14,6 +14,12 @@ set background=dark
 nnoremap <leader>b :let &background = ( &background == "dark"? "light" : "dark" )<CR>
 " set color scheme
 colorscheme solarized
+
+"set termguicolors
+"colorscheme catppuccin_frappe
+"let g:airline_theme='catppuccin_frappe'
+
+
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
 set clipboard=unnamed
 " Enhance command-line completion
@@ -220,3 +226,4 @@ set laststatus=2
 "nmap <leader>h :bprevious<CR>
 "nmap <leader>bq :bp <BAR> bd #<CR>
 "nmap <leader>bl :ls<CR>
+

@@ -6,6 +6,8 @@ alias .....="cd ../../../.."
 alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
+alias ws="windsurf"
+
 # Shortcuts
 alias p="cd ~/projects"
 
@@ -164,3 +166,4 @@ alias ifactive="ifconfig | pcregrep -M -o '^[^\t:]+:([^\n]|\n\t)*status: active'
 #alias egrep="egrep --color=auto"
 
 alias path='echo -e ${PATH//:/\\n}'
+
